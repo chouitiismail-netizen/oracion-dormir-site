@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   /* JesúsContigo-inspired warm palette */
@@ -13,18 +15,6 @@
   /* Fonts */
   --font-serif: var(--font-fraunces);
   --font-sans: var(--font-inter);
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
-  --color-accent-dark: var(--accent-dark);
-  --color-border: var(--border);
-  --color-card: var(--card);
-  --color-muted: var(--muted);
-  --font-sans: var(--font-sans);
-  --font-serif: var(--font-serif);
 }
 
 * {
@@ -53,7 +43,12 @@ a {
 }
 
 /* Serif headings for warmth */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-fraunces), Georgia, serif;
   font-weight: 600;
   line-height: 1.3;

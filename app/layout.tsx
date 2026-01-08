@@ -16,18 +16,18 @@ const inter = Inter({
   weight: ["400", "500", "600"],
 });
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://oracionparadormirenpaz.com";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://REPLACE_AFTER_VERCEL.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: "Oraciones para dormir en paz - Fe y calma nocturna",
-  description: "Oraciones y reflexiones católicas originales para terminar el día con calma, soltar preocupaciones y descansar con fe.",
-  keywords: ["oraciones para dormir", "oraciones católicas", "paz nocturna", "reflexiones espirituales"],
+  title: "Oraciones para la ansiedad - Calma tu mente con fe",
+  description: "Oraciones y reflexiones originales para calmar la mente, soltar preocupaciones y descansar con fe.",
+  keywords: ["oraciones para la ansiedad", "oraciones católicas", "calmar ansiedad", "paz interior", "reflexiones espirituales"],
   openGraph: {
-    title: "Oraciones para dormir en paz",
-    description: "Oraciones y reflexiones católicas para terminar el día con calma y fe.",
+    title: "Oraciones para la ansiedad",
+    description: "Oraciones y reflexiones originales para calmar la mente, soltar preocupaciones y descansar con fe.",
     url: baseUrl,
-    siteName: "Oraciones para dormir en paz",
+    siteName: "Oraciones para la ansiedad",
     locale: "es_ES",
     type: "website",
   },

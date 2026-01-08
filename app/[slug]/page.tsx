@@ -9,7 +9,7 @@ export async function generateStaticParams() {
     return getAllPages().map((p) => ({ slug: p.slug }));
 }
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://oracionparadormirenpaz.com";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://REPLACE_AFTER_VERCEL.vercel.app";
 
 export async function generateMetadata({
     params,
@@ -37,7 +37,7 @@ export async function generateMetadata({
             title: page.metaTitle || page.title,
             description: page.metaDescription,
             url: `${baseUrl}/${slug}`,
-            siteName: "Oraciones para dormir en paz",
+            siteName: "Oraciones para la ansiedad",
             locale: "es_ES",
             type: "article",
         },

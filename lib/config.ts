@@ -1,25 +1,25 @@
 // Curated content configuration for homepage sections
 
 export const START_HERE_SLUGS = [
-  'oracion-calmar-mente-antes-de-dormir',
-  'oracion-noche-soltar-preocupaciones',
-  'oracion-dormir-sin-ansiedad',
-  'oracion-entregar-miedo-noche',
-  'oracion-descansar-dia-dificil',
-  'oracion-dormir-con-gratitud',
+  'oraciones-para-la-ansiedad',
+  'oracion-para-calmar-la-ansiedad',
+  'oracion-para-la-ansiedad-nocturna',
+  'oracion-para-soltar-preocupaciones',
+  'oracion-para-la-mente-inquieta',
+  'oracion-para-tranquilizar-el-corazon',
 ];
 
 export const FEATURED_SLUGS = [
-  'oracion-familia-antes-de-dormir',
-  'oracion-proteccion-en-la-noche',
-  'oracion-por-mis-hijos-antes-de-dormir',
-  'oracion-cuando-no-puedo-dormir',
-  'oracion-cerrar-el-dia-con-calma',
-  'oracion-descansar-el-corazon',
+  'oracion-para-ataques-de-ansiedad',
+  'oracion-para-la-angustia',
+  'oracion-para-dejar-el-miedo',
+  'oracion-para-la-ansiedad-antes-de-dormir',
+  'oracion-para-respirar-y-confiar-en-dios',
+  'oracion-corta-para-la-ansiedad',
 ];
 
 // Primary prayer for main CTA
-export const PRIMARY_PRAYER_SLUG = 'oracion-calmar-mente-antes-de-dormir';
+export const PRIMARY_PRAYER_SLUG = 'oraciones-para-la-ansiedad';
 
 // Quick action categories with icons and slugs
 export interface QuickAction {

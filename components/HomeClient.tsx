@@ -64,10 +64,10 @@ export default function HomeClient({ allPages }: HomeClientProps) {
     <div className="min-h-screen">
       {/* Hero Section */}
       <Hero
-        title="Oraciones para dormir en paz"
-        subtitle="Encuentra calma y consuelo al final del día con oraciones católicas originales para terminar el día con fe y serenidad"
+        title="Oraciones para la ansiedad"
+        subtitle="Oraciones y reflexiones originales para calmar la mente, soltar preocupaciones y descansar con fe"
         ctaText="Comenzar a rezar"
-        ctaHref={primaryPrayer ? `/${primaryPrayer.slug}` : '/oracion-calmar-mente-antes-de-dormir'}
+        ctaHref={primaryPrayer ? `/${primaryPrayer.slug}` : '/oraciones-para-la-ansiedad'}
       />
 
       {/* Main Content */}
@@ -80,7 +80,7 @@ export default function HomeClient({ allPages }: HomeClientProps) {
                 Comienza aquí
               </h2>
               <p className="text-[var(--muted)]">
-                Las oraciones esenciales para iniciar tu práctica de oración nocturna
+                Las oraciones esenciales para calmar la ansiedad y encontrar paz
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -99,7 +99,7 @@ export default function HomeClient({ allPages }: HomeClientProps) {
                 Destacadas
               </h2>
               <p className="text-[var(--muted)]">
-                Oraciones especiales para situaciones específicas de la vida nocturna
+                Oraciones para situaciones específicas que generan ansiedad
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -1,8 +1,9 @@
 import type { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://REPLACE_AFTER_VERCEL.vercel.app";
     return {
         rules: [{ userAgent: "*", allow: "/" }],
-        sitemap: "https://oracionparadormirenpaz.com/sitemap.xml",
+        sitemap: `${baseUrl}/sitemap.xml`,
     };
 }

@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { getAllPages } from "../lib/content";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://oracionparadormirenpaz.com";
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://REPLACE_AFTER_VERCEL.vercel.app";
     const pages = getAllPages();
 
     return [
