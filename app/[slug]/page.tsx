@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { getAllPages, getPageBySlug, getRelatedSpiritualPages } from '../../lib/content';
+import { getArticlePageSchemas } from '../../lib/schema';
 import Container from '../../components/ui/Container';
 import Card from '../../components/ui/Card';
 
@@ -37,9 +38,14 @@ export async function generateMetadata({
             title: page.metaTitle || page.title,
             description: page.metaDescription,
             url: `${baseUrl}/${slug}`,
-            siteName: "Oraciones para la ansiedad",
+            siteName: "Oraciones para dormir en paz",
             locale: "es_ES",
             type: "article",
+        },
+        twitter: {
+            card: "summary",
+            title: page.metaTitle || page.title,
+            description: page.metaDescription,
         },
     };
 }
@@ -62,8 +68,26 @@ export default async function ArticlePage({
     // Parse content sections
     const sections = parseContent(page.content);
 
+    // Generate JSON-LD schemas
+    const schemas = getArticlePageSchemas({
+        slug: page.slug,
+        title: page.title,
+        metaDescription: page.metaDescription,
+        publishedAt: page.publishedAt,
+        updatedAt: page.updatedAt,
+        category: page.category,
+    });
+
     return (
         <div className="min-h-screen pb-8">
+            {/* JSON-LD Structured Data */}
+            {schemas.map((schema, idx) => (
+                <script
+                    key={idx}
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+                />
+            ))}
             <Container maxWidth="md" className="pt-6 space-y-6">
                 {/* Breadcrumb - only for spiritual pages */}
                 {!isLegal && (
